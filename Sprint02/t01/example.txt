@@ -1,0 +1,8 @@
+The Wabbajack is the Daedric artifact of Sheogorath, a mysterious staff that casts random spells
+ranging in effect from the complete disintegration, to the transformation, or empowerment of
+the target.
+These abilities are able to completely alter the course of battle in one of any number of ways.
+
+The Wabbajack is one of 5 Daedric artifacts made by the Daedric Prince of Madness, Sheogorath.
+Its rogue nature is a reflection upon Sheogorath's own chaos, choosing at random to either help
+or hinder those he encounters.
