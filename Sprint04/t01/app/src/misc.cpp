@@ -23,21 +23,3 @@ bool setWeapon(ImperialSoldier& is, TheStormcloakSoldier& ss, char *argv[]) {
     ss.setWeapon(axe);
     return true;
 }
-
-
-
-void printBattle(const ImperialSoldier& is, const TheStormcloakSoldier& ss, int idmg, int sdmg) {
-    std::cout << "Imperial soldier attacks and deals " + std::to_string(idmg) + " damage" << std::endl;
-    std::cout << "Stormcloak soldier consumes " + std::to_string(idmg) + " of damage";
-    if (ss.getHealth() <= 0) {
-        std::cout << " and dies";
-        return;
-    }
-    std::cout << std::endl;
-    std::cout << "Stormcloak soldier attacks and deals " + std::to_string(sdmg) + " damage" << std::endl;
-    std::cout << "Imperial soldier consumes " + std::to_string(sdmg) + " of damage";
-    if (is.getHealth() <= 0) {
-        std::cout << " and dies";
-        return;
-    }
-}

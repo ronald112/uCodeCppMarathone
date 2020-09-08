@@ -1,8 +1,16 @@
 #pragma once
 
-#include "Soldiers.h"
+#include "dragonborn.h"
+#include <map>
+#include <functional>
 #include <string>
-#include <iostream>
 
-void printBattle(const ImperialSoldier& is, const TheStormcloakSoldier& ss, int idmg, int sdmg);
-bool setWeapon(ImperialSoldier& is, TheStormcloakSoldier& ss, char *argv[]);
+using namespace std;
+
+struct Patterns {
+    Patterns();
+    map<string, Dragonborn::Actions> cmd;
+    map<Dragonborn::Actions, string> action;
+};
+
+void readCmd(std::string str, struct Patterns& patterns, Dragonborn& dr);

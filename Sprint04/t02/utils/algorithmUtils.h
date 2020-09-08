@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
+#include <vector>
 
 namespace Utils {
     // [from, to]
@@ -80,13 +81,13 @@ namespace Utils {
 
     template <class T, class... Args>
     const auto& Min(const T& arg, const Args&... args) {
-        std::multiset<T> elements{arg, args...};
+        std::vector<T> elements{arg, args...};
         return *std::min_element(elements.begin(), elements.end());
     }
 
     template <class T, class... Args>
     const auto& Max(const T& arg, const Args&... args) {
-        std::multiset<T> elements{arg, args...};
+        std::vector<T> elements{arg, args...};
         return *std::max_element(elements.begin(), elements.end());
     }
 
@@ -138,7 +139,7 @@ namespace Utils {
 
     template<class Collection, class T>
     int IndexOf(const Collection& c, const T& value) {
-        auto it = Find(C, value);
+        auto it = Find(c, value);
         if (it != c.end())
             return std::distance(c.begin, it);
         else
@@ -146,7 +147,7 @@ namespace Utils {
     }
     template<class Collection, class Pred>
     int IndexOfIf(const Collection& c, Pred&& predicate) {
-        auto it = FindIf(C, value, predicate);
+        auto it = FindIf(c, predicate);
         if (it != c.end())
             return std::distance(c.begin, it);
         else

@@ -13,8 +13,10 @@ int main(int argc, char *argv[]) {
 
         while(is.getHealth() > 0 && ss.getHealth() > 0) {
             is.attack(ss);
-            ss.attack(is);
-            printBattle(is, ss, std::stoi(argv[1]), std::stoi(argv[2]));
+            if (ss.getHealth() > 0) {
+                std::cout << std::endl;
+                ss.attack(is);
+            }
             std::cout << "\n<<<<<<<<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>>>>>>>" << std::endl;
         }
         if (is.getHealth() > 0) {

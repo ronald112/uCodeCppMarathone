@@ -21,11 +21,17 @@ void TheStormcloakSoldier::setWeapon(Axe* weapon) {
 }
 
 void TheStormcloakSoldier::attack(ImperialSoldier& enemy) {
+    std::cout << "Stormcloak soldier attacks and deals "
+        + std::to_string(m_weapon->getDamage()) + " damage" << std::endl;
     enemy.consumeDamage(m_weapon->getDamage());
 }
 
 void TheStormcloakSoldier::consumeDamage(int amount) {
     m_health -= amount;
+    std::cout << "Stormcloak soldier consumes " + std::to_string(amount) + " of damage";
+    if (m_health <= 0) {
+        std::cout << " and dies";
+    }
 }
 
 int TheStormcloakSoldier::getHealth() const {
