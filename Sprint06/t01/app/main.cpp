@@ -28,5 +28,5 @@ int main() {
     delete chest;
     delete safe;
 
-return 0;
+    return 0;
 }

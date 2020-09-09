@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 enum class LockpickDifficulty {
     None = 0,
     Novice = 25,
