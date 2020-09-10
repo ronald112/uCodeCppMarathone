@@ -68,7 +68,7 @@ namespace Utils {
 
     template <class Collection, class Pred>
     bool ContainsIf(const Collection& c, Pred&& predicate) {
-        if (Find(c, predicate) != c.end()) {
+        if (FindIf(c, predicate) != c.end()) {
             return true;
         }
         return false;
